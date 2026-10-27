@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volleyball Varsity Player Checker</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+
+  <py-config>
+    files = ["main.py"]
+  </py-config>
+
+  <style>
+    body {
+      background-color: #F1F1F1; /* Seashell */
+      font-family: 'Chewy', cursive, sans-serif;
+      color: #775537; /* Old Copper */
+      letter-spacing: 1px;
+    }
+
+    .checker-card {
+      background-color: #F1F1F1; /* Seashell */
+      border: 2px solid #C0DDDA; /* Nebula border */
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(119, 85, 55, 0.1);
+      overflow: hidden;
+    }
+
+    .header-banner {
+      background-color: #C0DDDA; /* Nebula */
+      color: #775537; /* Old Copper */
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .header-banner h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .header-banner p {
+      margin: 4px 0 0 0;
+      font-size: 1rem;
+    }
+
+    .form-control {
+      font-family: 'Chewy', cursive, sans-serif;
+      background-color: #ffffff;
+      border: 1px solid #C0DDDA;
+      color: #775537;
+    }
+
+    .form-control:focus {
+      background-color: #ffffff;
+      border-color: #775537;
+      box-shadow: 0 0 0 0.25rem rgba(192, 221, 218, 0.25);
+      color: #775537;
+    }
+
+    .btn-enter {
+      background-color: #FBE29D; /* Butter Yellow */
+      color: #775537; /* Old Copper */
+      font-weight: normal;
+      font-size: 1.25rem;
+      border: 1px solid #775537;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-enter:hover {
+      background-color: #f7d780;
+      color: #775537;
+    }
+
+    .result-box {
+      background-color: #C0DDDA; /* Nebula */
+      border: 1px solid #775537;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      color: #775537;
+      font-size: 1.1rem;
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+      color: #775537;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        
+        <div class="card checker-card">
+          <div class="header-banner">
+            <h2>VOLLEYBALL VARSITY PLAYER CHECKER</h2>
+            <p>Player Verification System</p>
+          </div>
+
+          <div class="card-body p-4">
+            <div class="mb-3">
+              <input type="text" id="first_name" class="form-control" placeholder="First Name">
+            </div>
+
+            <div class="mb-3">
+              <input type="text" id="last_name" class="form-control" placeholder="Last Name">
+            </div>
+
+            <button id="check_btn" py-click="candidate_checker" class="btn btn-enter w-100 py-2 mb-4">
+              ENTER!
+            </button>
+
+            <div id="result_area" class="result-box">
+              Please enter candidate name and click ENTER.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-text">
+          © 2026 Volleyball Varsity • Version 1.0 • Eleanor Osea
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <py-script src="main.py"></py-script>
+
+</body>
+</html>
